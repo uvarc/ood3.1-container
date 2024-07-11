@@ -1,0 +1,10 @@
+auth:
+  - 'AuthType Basic'
+  - 'AuthName "Open OnDemand"'
+  - 'AuthBasicProvider PAM'
+  - 'AuthPAMService ood'
+  - 'Require valid-user'
+# Capture system user name from authenticated user name
+user_map_match: '.*'
+# map_fail_uri: "/register"
+user_env: "OIDC_CLAIM_preferred_username"
